@@ -69,13 +69,13 @@ public class MainController {
         List<Nhanvien> ds = employeeRepository.getNV();
         return ds;
     }
-//    @ResponseBody
-//    @GetMapping("/getChuyenBay")
-//    List<Chuyenbay> getChuyenBay()
-//    {
-//        List<Chuyenbay> ds = employeeRepository.getChuyenBay();
-//        return ds;
-//    }
+    @ResponseBody
+    @GetMapping("/getChuyenBay")
+    List<Chuyenbay> getChuyenBay()
+    {
+        List<Chuyenbay> ds = employeeRepository.getChuyenBay();
+        return ds;
+    }
 
 
 }
