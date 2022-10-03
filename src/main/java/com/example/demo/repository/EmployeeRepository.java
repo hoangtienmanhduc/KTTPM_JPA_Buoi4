@@ -1,9 +1,9 @@
-package com.example.springdatajpasecurityjwt.repository;
+package com.example.demo.repository;
 
-import com.example.springdatajpasecurityjwt.entity.Chuyenbay;
-import com.example.springdatajpasecurityjwt.entity.Employee;
-import com.example.springdatajpasecurityjwt.entity.Maybay;
-import com.example.springdatajpasecurityjwt.entity.Nhanvien;
+import com.example.demo.entity.Chuyenbay;
+import com.example.demo.entity.Employee;
+import com.example.demo.entity.Maybay;
+import com.example.demo.entity.Nhanvien;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

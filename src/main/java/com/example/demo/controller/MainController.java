@@ -1,10 +1,10 @@
-package com.example.springdatajpasecurityjwt.controller;
+package com.example.demo.controller;
 
-import com.example.springdatajpasecurityjwt.entity.Chuyenbay;
-import com.example.springdatajpasecurityjwt.entity.Employee;
-import com.example.springdatajpasecurityjwt.entity.Maybay;
-import com.example.springdatajpasecurityjwt.entity.Nhanvien;
-import com.example.springdatajpasecurityjwt.repository.EmployeeRepository;
+import com.example.demo.entity.Chuyenbay;
+import com.example.demo.entity.Employee;
+import com.example.demo.entity.Maybay;
+import com.example.demo.entity.Nhanvien;
+import com.example.demo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +28,6 @@ public class MainController {
         +"<a href=\"getMayBay\">Tìm máy bay có tầm bay > 10000 km </a><br/>"
         +"<a href=\"getNV\">Tìm nhân viên có lương <10000</a><br/>"
         +"<a href=\"getChuyenBay\">Tìm chuyến bay có độ dài đường bay nhỏ hơn 10.000km và lớn hơn 8.000km.</a><br/>"
-
         ;
         return html;
     }
@@ -42,9 +41,9 @@ public class MainController {
         Employee employee = new Employee();
 
         int random = new Random().nextInt(3);
-        employee.setFirstName("Dao");
-        employee.setLastName("Cao Thang");
-        employee.setEmail("Thang@gmail.com");
+        employee.setFirstName("Hoang Tien");
+        employee.setLastName("Manh Duc");
+        employee.setEmail("Duc@gmail.com");
         this.employeeRepository.save(employee);
 
         return "Inserted: " + employee;
@@ -70,13 +69,13 @@ public class MainController {
         List<Nhanvien> ds = employeeRepository.getNV();
         return ds;
     }
-    @ResponseBody
-    @GetMapping("/getChuyenBay")
-    List<Chuyenbay> getChuyenBay()
-    {
-        List<Chuyenbay> ds = employeeRepository.getChuyenBay();
-        return ds;
-    }
+//    @ResponseBody
+//    @GetMapping("/getChuyenBay")
+//    List<Chuyenbay> getChuyenBay()
+//    {
+//        List<Chuyenbay> ds = employeeRepository.getChuyenBay();
+//        return ds;
+//    }
 
 
 }

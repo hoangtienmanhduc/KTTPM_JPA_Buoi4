@@ -1,4 +1,4 @@
-package com.example.springdatajpasecurityjwt.entity;
+package com.example.demo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,13 +15,13 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "nhanvien")
-public class Nhanvien {
+@Table(name = "maybay")
+public class Maybay {
     @Id
-    @Column(name = "MaNV")
-    private String maNV;
-    @Column(name = "Ten")
-    private String tenNV;
-    @Column(name = "Luong")
-    private double luong;
+    @Column(name = "MaMB")
+    private int maMB;
+    @Column(name = "Loai")
+    private String loai;
+    @Column(name = "Tambay")
+    private int tamBay;
 }
